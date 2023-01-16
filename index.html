@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dracula</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      background-color: #eee;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: #00f;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+    .card p {
+      margin: 10px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Dracula's Local Server</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card">
+      <h3>Feature 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ligula at felis eleifend finibus.</p>
+    </div>
+    <div class="card">
+      <h3>Feature 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ligula at felis eleifend finibus.</p>
+    </div>
+    <div class="card">
+      <h3>Feature 3</
