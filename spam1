@@ -1,0 +1,15 @@
+Reproduction Steps:
+
+Navigate to the vulnerable endpoint: https://www.spamhero.com/cp/account/account-contacts.
+
+Add an account with billing permissions (this will be the attacker's account).
+
+Log in with the attacker's account and verify that you don’t have access to the Team Management area.
+
+Create a third account (attacker's second account) and use this account to add a with the function (user from another account). Intercept the request during this process.
+
+In the intercepted request, observe that it contains an x-csrf-token header and cookies. You can obtain these values by updating the attacker's profile and noting the x-csrf-token and cookies.
+
+Modify the intercepted request by replacing the x-csrf-token and cookies with the attacker's values. This will send a request to add a user from another account, using the attacker's session, despite the attacker only having billing permissions.
+
+Finally, log in with the owner’s account, navigate to the Team Management area, and observe that a new user has been added with technical and billing access without proper authorization.
